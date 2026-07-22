@@ -154,7 +154,7 @@ const LayoutBase = props => {
                 {/* 导航 */}
                 <div className='overflow-y-scroll scroll-hidden pt-10 pl-5'>
                   {/* 嵌入 */}
-                  <div className='hidden'>{slotLeft}</div>
+                  {slotLeft}
 
                   {/* 所有文章列表 */}
                   <NavPostList filteredNavPages={filteredNavPages} {...props} />
@@ -357,9 +357,7 @@ const LayoutSlug = props => {
               </div>
 
               {/* 分享 */}
-              <div className='hidden'>
-                <ShareBar post={post} />
-              </div>
+              <ShareBar post={post} />
               {/* 文章分类和标签信息 */}
               <div className='flex justify-between'>
                 {siteConfig('POST_DETAIL_CATEGORY') && post?.category && (
