@@ -18,6 +18,11 @@ const Style = () => {
         box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.1);
       }
 
+      #theme-gitbook #announcement-wrapper,
+      #theme-gitbook #container section > .m-1.overflow-x-auto {
+        display: none !important;
+      }
+
       ${themeConsoleStyle('gitbook', CONFIG)}
   `}</style>
   )
