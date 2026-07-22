@@ -6,7 +6,6 @@ import Live2D from '@/components/Live2D'
 import LoadingCover from '@/components/LoadingCover'
 import NotionIcon from '@/components/NotionIcon'
 import NotionPage from '@/components/NotionPage'
-import ShareBar from '@/components/ShareBar'
 import DashboardBody from '@/components/ui/dashboard/DashboardBody'
 import DashboardHeader from '@/components/ui/dashboard/DashboardHeader'
 import { siteConfig } from '@/lib/config'
@@ -153,9 +152,6 @@ const LayoutBase = props => {
               <div className='w-64 2xl:w-72 pt-14 pb-4 sticky top-0 h-screen flex justify-between flex-col'>
                 {/* 导航 */}
                 <div className='overflow-y-scroll scroll-hidden pt-10 pl-5'>
-                  {/* 嵌入 */}
-                  {slotLeft}
-
                   {/* 所有文章列表 */}
                   <NavPostList filteredNavPages={filteredNavPages} {...props} />
                 </div>
@@ -356,8 +352,6 @@ const LayoutSlug = props => {
                 <NotionPage post={post} />
               </div>
 
-              {/* 分享 */}
-              <ShareBar post={post} />
               {/* 文章分类和标签信息 */}
               <div className='flex justify-between'>
                 {siteConfig('POST_DETAIL_CATEGORY') && post?.category && (
