@@ -18,7 +18,6 @@ import Head from 'next/head'
 import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
 import { createContext, useContext, useEffect, useRef, useState } from 'react'
-import Announcement from './components/Announcement'
 import ArticleAround from './components/ArticleAround'
 import ArticleInfo from './components/ArticleInfo'
 import { ArticleLock } from './components/ArticleLock'
@@ -209,8 +208,6 @@ const LayoutBase = props => {
                       <Live2D />
                     </>
                   )}
-                  {/* gitbook主题首页只显示公告 */}
-                  <Announcement {...props} />
                 </div>
 
                 <AdSlot type='in-article' />

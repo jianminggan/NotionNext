@@ -25,7 +25,6 @@ const ExternalPlugin = props => {
   const { lang } = useGlobal()
   const [pluginsIdle, setPluginsIdle] = useState(false)
   const DISABLE_PLUGIN = siteConfig('DISABLE_PLUGIN', null, NOTION_CONFIG)
-  const THEME_SWITCH = siteConfig('THEME_SWITCH', null, NOTION_CONFIG)
   const DEBUG = siteConfig('DEBUG', null, NOTION_CONFIG)
   const ANALYTICS_ACKEE_TRACKER = siteConfig(
     'ANALYTICS_ACKEE_TRACKER',
@@ -243,7 +242,6 @@ const ExternalPlugin = props => {
       <GlobalStyle />
       {ENABLE_ICON_FONT && <IconFont />}
       {MOUSE_FOLLOW && <MouseFollow />}
-      {pluginsIdle && THEME_SWITCH && <ThemeSwitch />}
       {DEBUG && <DebugPanel />}
       {ANALYTICS_ACKEE_TRACKER && <Ackee />}
       {ANALYTICS_GOOGLE_ID && <Gtag />}
@@ -506,9 +504,6 @@ const TwikooCommentCounter = dynamic(
   { ssr: false }
 )
 const DebugPanel = dynamic(() => import('@/components/DebugPanel'), {
-  ssr: false
-})
-const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'), {
   ssr: false
 })
 const Fireworks = dynamic(() => import('@/components/Fireworks'), {
