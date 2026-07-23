@@ -2,7 +2,6 @@
 
 import Comment from '@/components/Comment'
 import { AdSlot } from '@/components/GoogleAdsense'
-import Live2D from '@/components/Live2D'
 import LoadingCover from '@/components/LoadingCover'
 import NotionIcon from '@/components/NotionIcon'
 import NotionPage from '@/components/NotionPage'
@@ -205,13 +204,11 @@ const LayoutBase = props => {
                         null,
                         CONFIG
                       ) === 'true' && <RevolverMaps />}
-                      <Live2D />
                     </>
                   )}
                 </div>
 
                 <AdSlot type='in-article' />
-                <Live2D />
               </div>
             </div>
           )}
